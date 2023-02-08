@@ -59,7 +59,7 @@ El objetivo es crear la solución con la consola de AWS porque ayuda a comprende
 - New role name
 - Buildspec: **Insert build commands** y click en **Switch to editor** y adicionar lo siguiente:
 
-```json
+```yaml
 version: 0.2
 phases:
   install:
