@@ -23,7 +23,9 @@ El objetivo es la creación de un CI/CD pipeline para los proyectos de **AWS CDK
 El objetivo es crear la solución con la consola de AWS porque ayuda a comprender cómo funcionan los servicios involucrados.
 
 1. En el servicio AWS CodePipeline seleccionamos la opción Create pipeline. Comenzamos con Step 1 con las configuraciones iniciales:
-<img src="img/codepipeline01.png" width="450" align="center"/>
+<p align="center">
+    <img src="img/codepipeline01.png" width="450" height="300"/>
+</p>
 
 2. En el Step 2 se configura el origen de código. Al seleccionar la opción de GitHub version 2, se debe de crear la nueva conexión con la opción "Connect to Github":
 <img src="img/codepipeline02.png" width="450" align="center"/>
