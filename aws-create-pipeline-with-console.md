@@ -51,7 +51,7 @@ El objetivo es crear la solución con la consola de AWS porque ayuda a comprende
 
 7. El Step 4: "Add the deploy stage", saltamos este paso ya que no se necesita:
 <p align="center">
-    <img src="img/codepipeline06.png" width="450"/>
+    <img src="img/codepipeline06.png" width="450"/><br>
     <img src="img/codepipeline07.png" width="450"/>
 </p>
 
