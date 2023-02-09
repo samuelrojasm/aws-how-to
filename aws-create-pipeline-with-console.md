@@ -65,7 +65,7 @@ phases:
   install:
     commands:
       - npm install
-      - npm install -g typescript
+      - npm install -g python
       - npm install -g aws-cdk
   build:
     commands:
@@ -82,6 +82,9 @@ phases:
     <img src="img/codebuild03.png" width="450"/>
 </p>
 
+3. Cómo funciona la implementación de CDK: 
+- Detrás de escena, cuando el comando **cdk deploy** se ejecuta, CDK usa las funciones de CDK creadas en el proceso de arranque para realizar algunas acciones: realizar una búsqueda, cargar archivos y hacer deploy de la plantilla cargada en el S3 en el servicio de CloudFormation.
+- El rol CodeBuild role asume el rol CDK para ejecutar  los comandos CDK, por lo que hay que especificar los permisos para el nueco rol.
 ### Step 4: Add deploy stage
 1. El Step 4: "Add the deploy stage", saltamos este paso ya que no se necesita:
 <p align="center">
