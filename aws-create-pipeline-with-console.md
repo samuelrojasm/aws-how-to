@@ -83,7 +83,7 @@ phases:
 </p>
 
 3. Cómo funciona la implementación de CDK:<br>
-Nota:  Validar si es necesario, correr el pipeline antes de asignar los permisos descrietos en este paso.
+Nota:  Validar si es necesario correr el pipeline antes de asignar los permisos descritos en este paso.
 - Detrás de escena, cuando el comando **cdk deploy** se ejecuta, CDK usa las funciones de CDK creadas en el proceso de arranque para realizar algunas acciones: realizar una búsqueda, cargar archivos y hacer deploy de la plantilla cargada en el S3 en el servicio de CloudFormation.
 - El rol CodeBuild role asume el rol CDK para ejecutar  los comandos CDK, por lo que hay que especificar los permisos para el nue rol.
 - Por lo tanto, es necesario actualizar el rol de CodeBuild para agregar el permiso de los roles de CDK. Para hacer esto, crear un nuevo permiso (new inline policy).
