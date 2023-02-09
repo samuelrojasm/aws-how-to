@@ -55,8 +55,8 @@ El objetivo es crear la solución con la consola de AWS porque ayuda a comprende
 2. Es necesario crear un proyecto de AWS CodeBuild, seleccionando la opción "Create project". Crear el proyecto de Build con las siguientes opciones:
 - Operating System: Amazon Linux 2
 - Runtime(s): Standard
-- Image: the more updated image
-- New role name
+- Image: Seleccionar la versión más actual
+- Service role: New service role
 - Buildspec: **Insert build commands** y click en **Switch to editor** y adicionar lo siguiente:
 
 ```yaml
@@ -75,6 +75,12 @@ phases:
 ```
 
 - Adicionar a CloudWatch log, seleccionad como **Group name** /aws/codebuild/cdk-project
+
+<p align="center">
+    <img src="img/codebuild01.png" width="450"/><br>
+    <img src="img/codebuild02.png" width="450"/><br>
+    <img src="img/codebuild03.png" width="450"/>
+</p>
 
 ### Step 4: Add deploy stage
 1. El Step 4: "Add the deploy stage", saltamos este paso ya que no se necesita:
