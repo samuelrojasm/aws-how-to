@@ -48,19 +48,18 @@ import { ManualApprovalStep } from 'aws-cdk-lib/pipelines';
 new CodePipeline(this, 'Pipeline', {
       pipelineName: 'CDKTestPipeline',       // Creating a new code pipeline which is a construct
       synth: new ShellStep('Synth', {        // Add a new synthesis 'shellstep' which will be pointed at our gihub repository 
-        input: CodePipelineSource.gitHub('aLLUPS/aws-codepipeline-project', 'main'), // replace the GitHub repository name with 'user-name/repository-name'
+        input: CodePipelineSource.gitHub('user-name/aws-codepipeline-project', 'main'), // replace the GitHub repository name with 'user-name/repository-name'
         
         // The build steps for the pipeline are defined by these commands
-        
         commands: ['npm ci',
                    'npm run build',
                    'npx cdk synth']
       }),
-    })
-  }
-}
+})
 ```
 
+- En la clase **AwsCodepipelineProjectStack** se crea un nuevo constructor de **CodePipeline** con el nombre **CDKTestPipeline**
+- Se crea una nueva **synthesis** "ShellStep" que apunta al repositorio de Github en donde se localiza el código base de CDK
 4. sssss
 
 5. sssss
