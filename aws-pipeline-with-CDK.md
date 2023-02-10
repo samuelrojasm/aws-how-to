@@ -1,14 +1,14 @@
 # Introducción
 Automatizar el despliegue de un pipeline de un proyecto de AWS CDK con AWS Codepipeline integrado en un repositorio de GitHub.
 
-## Pre-requisitos
+## Step 1: Pre-requisitos
 1. Instalar AWS-CLI
 1. Configurar credeenciales de manera local
 1. Instalar NodeJS
 1. Instalar CDK (global)
 1. Crear un repositorio vacio (por ejemmplo: aws-codepipeline-project) y clonarlo
 
-## Setup del proyecto CDK
+## Step 2: Setup del proyecto CDK
 ### 1. Setup inicial de Code Base el proyecto CDK
 - Movernos a la carpeta en donde se clonó el repositorio vacio, por ejemmplo: aws-codepipeline-project
 - Abrir la carpeta en VSCode
@@ -62,13 +62,26 @@ new CodePipeline(this, 'Pipeline', {
 - Se crea una nueva **synthesis** "ShellStep" que apunta al repositorio de Github en donde se localiza el código base de CDK.
 - La ejecución del pipeline ocurrirá ante cualquier cambio en main branch de nuestro repositorio.
 - Al final se agregan los comandos  paara el paso build en el pipeline:
-* `npm ci` - (npm clean install), which is similar to npm install that is to be used in automated environments.
-* `npm run build` - to allow us to perform any necessary building/prep tasks for the project.
-* `npx cdk synth` - to synthesize whatever we have in the cloud formation stack to generate the self mutating pipeline.
+    * `npm ci` - (npm clean install), which is similar to npm install that is to be used in automated environments.
+    * `npm run build` - to allow us to perform any necessary building/prep tasks for the project.
+    * `npx cdk synth` - to synthesize whatever we have in the cloud formation stack to generate the self mutating pipeline.
 
-### 4. Hacer el commit de los cambios al repositorio remoto de Github:
+### 4. Hacer el commit y push de los cambios al repositorio remoto de Github:
 ```console
 git remote add origin https://github.com/user-name/aws-codepipeline-project.git
+git add .
+git commit -m "commit inicial"
+git branch -M main
+git push -u origin main
 ```
 
-### 5. sssss
+## Step 3: Crear accesos y configuraciones en AWS
+
+## Step 4: Deployment del Pipeline con un Stages básicos
+### 1. Bootstrap del proyecto CDK en respositorio local
+- Si está ejecutando un proyecto CDK por primera vez en la máquina local, otro paso importante antes de desplegar el proyecto CDK en codepipeline, es hacer bootstrap. Ejecute los siguientes comandos, en el directorio raíz para arrancar el entorno del proyecto.
+```console
+cdk bootstrap
+```
+
+
