@@ -21,12 +21,12 @@ cdk init app --language typescript
 
 - Useful commands:
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+    * `npm run build`   compile typescript to js
+    * `npm run watch`   watch for changes and compile
+    * `npm run test`    perform the jest unit tests
+    * `cdk deploy`      deploy this stack to your default AWS account/region
+    * `cdk diff`        compare deployed stack with current state
+    * `cdk synth`       emits the synthesized CloudFormation template
 
 ### 2. Ir al directorio **bin** y abrir el archivo: **your-root-directory-name.ts** y hacer las siguientes modificaciones:
 ```js
@@ -76,6 +76,8 @@ git push -u origin main
 ```
 
 ## Step 3: Crear accesos y configuraciones en AWS
+- Generar un Access Token personal en Github
+- Guardar el token en AWS Secrets Manager
 
 ## Step 4: Deployment del Pipeline con un Stages básicos
 ### 1. Bootstrap del proyecto CDK en respositorio local
@@ -83,5 +85,10 @@ git push -u origin main
 ```console
 cdk bootstrap
 ```
-
+- Si el proceso de bootstrap tienen exito se debe de observar en el stack de CloudFormation en la cuenta de AWS.
+### 2. Deploy del proyecto CDK
+- Crea la versión inicial de CodePipeline y la infraestructura requerida para hacer el deploy del proyecto.
+```console
+cdk deploy
+```
 
