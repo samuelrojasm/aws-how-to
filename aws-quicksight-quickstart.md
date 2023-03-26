@@ -35,3 +35,7 @@
     <p align="center">
         <img src="img/quicksight-quickstart06.png" width="450"/>
     </p>
+
+
+## Referencias
+- [QuickSight Workshops](https://catalog.workshops.aws/quicksight/en-US)
