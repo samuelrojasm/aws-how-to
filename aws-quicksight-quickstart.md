@@ -64,3 +64,5 @@ Como alternativa, puede desplegar la sección Field Wells en la parte superior d
 
 ## Referencias
 - [QuickSight Workshops](https://catalog.workshops.aws/quicksight/en-US)
+- [paginated-reports](https://aws.amazon.com/es/quicksight/paginated-reports/)
+
