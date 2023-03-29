@@ -64,5 +64,6 @@ Como alternativa, puede desplegar la sección Field Wells en la parte superior d
 
 ## Referencias
 - [QuickSight Workshops](https://catalog.workshops.aws/quicksight/en-US)
-- [paginated-reports](https://aws.amazon.com/es/quicksight/paginated-reports/)
+- [Paginated-reports](https://aws.amazon.com/es/quicksight/paginated-reports/)
+- [Analyzing VPC Flow Logs using Amazon Athena, and Amazon QuickSight](https://aws.amazon.com/es/blogs/big-data/analyzing-vpc-flow-logs-using-amazon-athena-and-amazon-quicksight/)
 
